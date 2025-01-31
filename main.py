@@ -99,9 +99,9 @@ def scrape_property_details(scraper, url, headers):
 
 if __name__ == "__main__":
     base = os.getenv("BASE_URL", "https://www.dahaboo.com/")
-    BASE_URL = os.getenv("SCRAPER_TARGET_URL", "https://www.dahaboo.com/locaux-commerciaux-10/")
+    BASE_URL = os.getenv("SCRAPER_TARGET_URL", "https://www.dahaboo.com/immobilier-7/")
     OUTPUT_FILE = "output/properties.xlsx"
     START_PAGE = int(os.getenv("START_PAGE", 1))
-    END_PAGE = int(os.getenv("END_PAGE", 1))
+    END_PAGE = int(os.getenv("END_PAGE", 99))
 
     scrape_properties(BASE_URL, OUTPUT_FILE, base, START_PAGE, END_PAGE)
